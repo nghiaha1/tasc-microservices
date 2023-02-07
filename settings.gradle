@@ -1,0 +1,6 @@
+rootProject.name = 'microservices'
+include 'common'
+include 'user'
+include 'employee'
+include 'api-gateway'
+

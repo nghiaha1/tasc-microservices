@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+redis:
+  config: ./././config/singleNodeConfig.yaml
+
+zuul:
+  routes:
+    user:
+      path: /api/v1/users/**
+      url: http://localhost:8082/api/v1/users
+
+    role:
+      path: /api/v1/roles/**
+      url: http://localhost:8082/api/v1/roles
+
+    employee:
+      path: /api/v1/employees/**
+      url: http://localhost:8083/api/v1/employees
+
+spring:
+  application:
+    name: prj-api-gw
